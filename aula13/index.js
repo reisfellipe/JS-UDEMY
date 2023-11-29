@@ -26,3 +26,4 @@ console.log(alunos);
 const materias = ['Filosofia', 'Inglês', 'Tecnologia', 'Português', 'Química'];
 
 console.log(materias.slice(0, 3)); //vai fatiar do índice 0 até 2
+console.log(materias instanceof Array); //Verifica se é um Array > TRUE or FALSE
