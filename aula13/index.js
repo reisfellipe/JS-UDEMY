@@ -23,7 +23,9 @@ console.log(alunos);
 
 //USANDO OUTRA ARRAY AGORA
 //                    0            1           2           3            4
-const materias = ['Filosofia', 'Inglês', 'Tecnologia', 'Português', 'Química'];
+let materias = ['Filosofia', 'Inglês', 'Tecnologia', 'Português', 'Química'];
 
 console.log(materias.slice(0, 3)); //vai fatiar do índice 0 até 2
+
+materias = 133;
 console.log(materias instanceof Array); //Verifica se é um Array > TRUE or FALSE
