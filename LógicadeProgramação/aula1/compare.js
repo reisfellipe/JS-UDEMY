@@ -10,4 +10,11 @@ Operadores de comparação
 !== diferente estrito (valor e tipo)
 */
 
-console.log(10 > 5); //true
+const comp = 10 != '10';
+// console.log(comp);
+
+function compare(x, y) {
+    return x === y;
+}
+
+console.log(compare(10,10));
