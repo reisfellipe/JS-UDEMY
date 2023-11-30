@@ -67,6 +67,10 @@ form button {
     transition-duration: all .9s;
 }
 
+form button:active {
+    color: black;
+}
+
 form button:hover {
     cursor: pointer;
     background-image: linear-gradient(to top, #1f552f, #018d30);
