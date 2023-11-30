@@ -22,7 +22,6 @@ function getWeekDays(){
 }
 
 //new Date(); vazio retorna o tempo atual
-
 const data = new Date('2004-09-07 00:00:00');
 const diaSemana = data.getDay();
 const diaSemanaNome = getWeekDays();
