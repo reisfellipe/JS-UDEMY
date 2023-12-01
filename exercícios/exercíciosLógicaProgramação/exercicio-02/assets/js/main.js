@@ -1,12 +1,11 @@
-const resultado = document.querySelector('.info');
-let data;
-const day = data.getDay();
-const month = data.getMonth() + 1;
-const year = data.getFullYear();
+/*
+const h1 = document.querySelector('.h1');
+const data = new Date();
 
-function showTime(day) {
-    switch (timeNow) {
-        case 0:  
+function getDiaSemanaTexto(diaSemana) {
+    let weekDay;
+    switch (diaSemana) {
+        case 0:
             return `Domingo`;
         case 1:
             return `Segunda-feira`;
@@ -25,5 +24,62 @@ function showTime(day) {
     }
 }
 
+function getMonthName(numeroMes) {
+    let monthName;
+    switch (numeroMes) {
+        case 0:
+            monthName = 'Janeiro';
+            return monthName;
+        case 1:
+            monthName = 'Fevereiro';
+            return monthName;
+        case 2:
+            monthName = 'Março';
+            return monthName;
+        case 3:
+            monthName = 'Abril';
+            return monthName;
+        case 4:
+            monthName = 'Maio';
+            return monthName;
+        case 5:
+            monthName = 'Junho';
+            return monthName;
+        case 6:
+            monthName = 'Julho';
+            return monthName;
+        case 7:
+            monthName = 'Agosto';
+            return monthName;
+        case 8:
+            monthName = 'Setembro';
+            return monthName;
+        case 9:
+            monthName = 'Outubro';
+            return monthName;
+        case 10:
+            monthName = 'Novembro';
+            return monthName;
+        case 11:
+            monthName = 'Dezembro';
+            return monthName;
+                
+    }
+}
+function zeroEsquerda(num){
+    return num >= 10 ? num : `0${num}`
+}
 
- resultado.innerHTML = `Hoje é ${showTime(day)}, ${}`;
+function criaData(data) {
+    const diaSemana = data.getDay();
+    const numeroMes = data.getMonth();
+
+    const nomeDia = getDiaSemanaTexto(diaSemana);
+    const nomeMes = getMonthName(numeroMes);
+
+    return (`${nomeDia}, ${data.getDate()} de ${nomeMes}` + ` de ${data.getFullYear()} ${zeroEsquerda(data.getHours())}:${zeroEsquerda(data.getMinutes())}`);
+}
+
+h1.innerHTML = criaData(data);
+*/
+
