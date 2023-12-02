@@ -32,8 +32,12 @@ const carro = {
     }
 };
 
-const { marca, ano: geracao, interior: tecnologia = `${techCar}` } = carro;
-console.log(marca, geracao, tecnologia)
+const { 
+    marca, //selecionando pela chave
+     ano: geracao, //transferindo valor da chave ano para a variável geração
+      pecas: {interior = item1}  //pegando valor do objeto/chave pecas e passando valor de interior para variável item1
+     } = carro;
+console.log(marca, geracao, item1);
 
 //Mais um objeto
 
