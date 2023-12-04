@@ -84,7 +84,7 @@ form button:hover {
 button {
     padding: 10px 20px;
     border-radius: 10px;
-    background-color: #222;
+    background-color:gray;
     color: white;
     font-weight: bold;
     font-size: 1rem;
