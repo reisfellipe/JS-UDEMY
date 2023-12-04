@@ -1,0 +1,113 @@
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --bg-color-gradient: linear-gradient(to 45deg, #38184C,#45214A,#323050);
+    --font-default: 'Open sans', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    outline: 0;
+}
+
+body {
+    background-image: linear-gradient(to top, #38184C,#45214A,#323050);
+    font-family: var(--font-default);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+h1 {
+    color: orange;
+}
+
+p {
+    color: gray;
+}
+
+.container {
+    max-width: 640px;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 14px;
+    background: linear-gradient(to bottom, #180326, #380759, #590D8C);
+}
+
+form input, form label,form button {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+form input {
+    font-size: 24px;
+    height: 50px;
+    border-radius: 10px;
+    padding: 0 20px;
+}
+
+form input:focus {
+    outline: 3px solid rgb(184, 2, 184);
+}
+
+form button {
+    border: none;
+    background: rgb(11, 155, 11);
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.356);
+
+    transition-duration: all .9s;
+}
+
+form button:active {
+    color: black;
+}
+
+form button:hover {
+    cursor: pointer;
+    background-image: linear-gradient(to top, #1f552f, #018d30);
+}
+
+
+.relogio {
+    font-size: 3em;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #222;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.397);
+    transition: all .5s;
+}
+
+.iniciar {
+    background-color: rgb(6, 147, 194);
+}
+
+.iniciar:hover {
+    background-color: lightblue;
+    color: black;
+}
+
+button:hover {
+    outline: 2px solid orange;
+    color: orange;
+    font-size: 1.1rem;
+    background-color: #4E342E;
+}
+
+button:active {
+    color: rgb(255, 0, 0);
+}
