@@ -43,72 +43,41 @@ form input, form label,form button {
     width: 100%;
 }
 
-form input {
+input {
     font-size: 24px;
     height: 50px;
     border-radius: 10px;
     padding: 0 20px;
+    margin-right: 10px;
 }
 
-form input:focus {
-    outline: 3px solid rgb(184, 2, 184);
+input:focus {
+    outline: 3px solid orangered;
 }
 
-form button {
+button {
     border: none;
     background: rgb(11, 155, 11);
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     padding: 15px;
     border-radius: 15px;
     box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.356);
-
+    margin: auto 20px;
     transition-duration: all .9s;
 }
 
-form button:active {
-    color: black;
-}
-
-form button:hover {
-    cursor: pointer;
-    background-image: linear-gradient(to top, #1f552f, #018d30);
-}
-
-
-.relogio {
-    font-size: 3em;
-}
-
-button {
-    padding: 10px 20px;
-    border-radius: 10px;
-    background-color:gray;
-    color: white;
-    font-weight: bold;
-    font-size: 1rem;
-    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.397);
-    transition: all .5s;
-}
-
-.iniciar {
-    background-color: rgb(6, 147, 194);
-}
-
-.iniciar:hover {
-    background-color: lightblue;
+button:active {
     color: black;
 }
 
 button:hover {
-    outline: 2px solid orange;
-    color: orange;
-    font-size: 1.1rem;
-    background-color: #4E342E;
+    cursor: pointer;
+    background-image: linear-gradient(to top, #1f552f, #018d30);
 }
 
-button:active {
-    color: rgb(255, 0, 0);
+ul li {
+    color: lightblue;
+    font-weight: bold;
 }
-
