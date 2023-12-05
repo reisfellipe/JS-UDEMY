@@ -23,8 +23,9 @@ function criaBotaoApagar(li){
     li.innerText  += '';
     const botaoApagar = document.createElement('button');
     botaoApagar.innerText = 'Apagar Tarefa';
-    // botaoApagar.classList.add('apagar');
+    // botaoApagar.classList.add('apagar');    
     botaoApagar.setAttribute('class','apagar');
+    botaoApagar.setAttribute('title','Apagar esta tarefa');
     li.appendChild(botaoApagar);
 }
 
@@ -39,4 +40,11 @@ function criaTarefa(textoInput) {
 btnTarefa.addEventListener('click', function(){
     if(!inputTarefa.value)return;
     criaTarefa(inputTarefa.value);
+});
+
+document.addEventListener('click', function(e){
+    const el = e.target;
+    if(el.classList.contains('apagar')){
+        console.log(el.parentElement);
+    }
 });
