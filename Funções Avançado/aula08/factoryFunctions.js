@@ -2,8 +2,9 @@ function criaPessoa(nome, sobrenome, altura, peso) {
     return {
         nome,
         sobrenome,
-        fala: function(assunto){
-            // nome e sobrenome não precisam ser acessados com this porque está antes de 'fala:'
+        fala: function(assunto){ //ou fala(assunto){}
+            // nome e sobrenome não precisam ser acessados com this '
+            // Peso e altura precisam do prefixo this. porque não está dentro do escopo da função
             return `${nome} ${sobrenome} está falando sobre ${assunto}, e pesa ${this.peso}Kg, sua altura é de ${this.altura}`;
         },
         altura: altura,
