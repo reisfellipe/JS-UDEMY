@@ -1,0 +1,120 @@
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --bg-color-gradient: linear-gradient(to 45deg, #38184C,#45214A,#323050);
+    --font-default: 'Open sans', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    outline: 0;
+}
+
+body {
+    background-image: linear-gradient(to top, #38184C,#45214A,#323050);
+    font-family: var(--font-default);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+h1 {
+    color: orange;
+}
+
+p {
+    color: gray;
+}
+
+.container {
+    max-width: 640px;
+    margin: 20px 20px;
+    padding: 30px;
+    border-radius: 14px;
+    background: linear-gradient(to bottom, #180326, #380759, #590D8C);
+}
+
+form input, form label,form button {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+form input {
+    font-size: 24px;
+    height: 50px;
+    border-radius: 10px;
+    padding: 0 20px;
+}
+
+form input:focus {
+    outline: 3px solid rgb(184, 2, 184);
+}
+
+form button {
+    border: none;
+    background: rgb(11, 155, 11);
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.356);
+
+    transition-duration: all .9s;
+}
+
+form button:active {
+    color: black;
+}
+
+form button:hover {
+    cursor: pointer;
+    background-image: linear-gradient(to top, #1f552f, #018d30);
+}
+
+.calculadora {
+    width: 400px;
+}
+
+.display {
+    font-size: 2em;
+    width: 100%;
+    text-align: right;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    background-color: #504058;
+    color: lightgray;
+}
+
+.display:focus {
+    border: 3px solid royalblue;
+}
+
+.btn {
+    width: 100%;
+    height: 50px;
+    font-size: 1.3rem;
+    border:none;
+    background:#83808056;
+    color: orange;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all .5s;
+}
+
+.btn:hover {
+    background-color: #222;
+    color: orangered;
+}
+
+.btn:active {
+    color: white;
+}
+
+.btn-eq {
+    background-color: royalblue;
+}
