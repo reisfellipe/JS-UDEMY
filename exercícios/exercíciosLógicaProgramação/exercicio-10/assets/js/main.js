@@ -1,71 +1,53 @@
 function Calculadora(){
+    this.display = document.querySelector('.display');
 
-    const display = document.querySelector('.display');
-
-    const inicia = () => {
-        cliqueBotoes();
-        pressEnter();
+    this.inicia = () => {
+        this.cliqueBotoes();
+        this.pressEnter();
     };
 
-    const pressEnter = () => {
-        display.addEventListener('keypress', e => {
-            if(e.keyCode === 13){
-                return realizaConta();
-            }
+    this.pressEnter = () => {
+        this.display.addEventListener('keyup', e => {
+            if(e.keyCode === 'Enter') return;
+            this.realizaConta();
         })
     };
 
-    const realizaConta = () => {
-        let conta = = display.value;
+    this.cliqueBotoes = () => {
+        document.addEventListener('click', e => {
+            const el = e.target;
+            if(el.classList.contains('btn-num')) this.btnParaDisplay(el.innerText);
+            if(el.classList.contains('btn-clear')) this.clearDisplay();
+            if(el.classList.contains('btn-del')) this.deleteOne(el);
+            if(el.classList.contains('btn-eq')) this.realizaConta(el);
+        });
+    };
 
+    this.realizaConta = () => {        
         try {
-            conta = eval(conta);
+            const conta = eval(this.display.value);
             if(!conta){
                 alert('Conta inválida');
                 return;
             }
-            display.value = String(conta);
+            this.display.value = conta;
         }catch(e){
             alert('Conta inválida');
             return;
         }
     };
 
-    const clearDisplay = () => {
-        display.value = '';
+    this.clearDisplay = () => this.display.value = '';
+    
+    this.deleteOne = () => this.display.value = this.display.value.slice(0, -1);
+
+    this.btnParaDisplay = el => {
+        this.display.value += el.innerText;
+        this.display.focus();
     };
 
-    const deleteOne = () => {
-        display.value = display.value.slice(0, -1);
-    };
-
-    const btnParaDisplay = (valor) => {
-        display.value += valor;
-    };
-
-    const cliqueBotoes = () => {
-        document.addEventListener('click', e => {
-            const el = e.target;
-        })
-
-        if(el.classList.contains('btn-num')){
-            btnParaDisplay(el.innerText);
-        }
-
-        if(el.classList.contains('btn-clear')){
-            clearDisplay();
-        }
-
-        if(el.classList.contains('btn-del')){
-            deleteOne();
-        }
-
-        if(e.classList.contains('btn-eq')){
-            realizaConta();
-        }
-    };
 
 }
 
-const turnOn = new Calculadora.inicia();
-turnOn();
+const calculadora = new Calculadora();
+calculadora.inicia();
