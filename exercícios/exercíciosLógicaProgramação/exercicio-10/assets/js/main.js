@@ -23,7 +23,7 @@ function Calculadora(){
         });
     };
 
-    this.realizaConta = () => {        
+    this.realizaConta = () => {         
         try {
             const conta = eval(this.display.value);
             if(!conta){

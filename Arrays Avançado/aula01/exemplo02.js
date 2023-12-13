@@ -19,5 +19,6 @@ const nome = nomes.join(' ');
 console.log(nome);
 
 
+
 // const nomes = 'Fellipe Reis Silva';
 // const nomes = nome.split(' ');
