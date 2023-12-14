@@ -13,7 +13,7 @@ const pessoas = [
 ];
 
 const nomes = pessoas.map(obj => obj.nome);
-console.log(nomes); 
+// console.log(nomes); 
 
 const idades = pessoas.map(obj => {
 //  Uma forma de deletar a chave nome do objeto
@@ -22,8 +22,18 @@ const idades = pessoas.map(obj => {
 //Outra forma de fazer isso, é simplesmente retornar um objeto literal contendo só os valores da chave idade. Veja;
     return {idade: obj.idade};
 });
-console.log(idades);
+// console.log(idades);
 
 // ou simplesmente fazer em uma linha
 const onlyIdades = pessoas.map(obj => ({idade: obj.idade}));
-console.log(onlyIdades);
+// console.log(onlyIdades);
+
+// ADICIONANDO ID NO OBJETO
+
+const comIds = pessoas.map(obj => {
+    // obj.id = (indice + 1) * 1000 ;
+    const newObj = {...obj };
+    newObj.id = indice;
+    return newObj;
+});
+console.log(comIds);
