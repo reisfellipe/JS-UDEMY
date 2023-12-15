@@ -12,5 +12,10 @@ pessoa1.getDataNascimento = function(){
     return dataAtual.getFullYear() - this.idade; 
 };
 
-console.log(pessoa1.getDataNascimento());
-pessoa1.falarNome();
+for(let chave in pessoa1){
+    console.log(pessoa1[chave]);
+};
+
+
+// console.log(pessoa1.getDataNascimento());
+// pessoa1.falarNome();
