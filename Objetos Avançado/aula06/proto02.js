@@ -15,7 +15,6 @@ const p1 = new Produto('Camiseta', 50);
 // p1.desconto(100); // 0
 // p1.aumento(100);
 
-
 // Nesse caso estamos atribuindo um objeto literal para p2, para instanciar o prototipo do objeto Produto
 const p2 = {
     nome: 'Caneca',
