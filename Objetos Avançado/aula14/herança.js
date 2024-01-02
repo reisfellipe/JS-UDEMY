@@ -41,7 +41,7 @@ console.log(s1);
 
 class Tablet extends DispositivoEletronico  {
     constructor(nome,temWifi){
-        super(nome);  
+        super(nome);
         this.temWifi = temWifi;
     }
 
