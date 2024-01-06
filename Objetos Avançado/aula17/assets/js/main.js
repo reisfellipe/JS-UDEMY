@@ -2,7 +2,6 @@ class ValidaFormulario {
     constructor(){
         this.formulario = document.querySelector('.formulario');
         this.eventos();
-
     }
 
     eventos(){
@@ -41,7 +40,7 @@ class ValidaFormulario {
         return valid;
     }
 
-    camposSaoValidos(){
+    camposSaoValidos(campo){
         let valid = true;
 
         for(let errorText of this.formulario.querySelectorAll('.error-text')){
@@ -89,6 +88,9 @@ class ValidaFormulario {
             this.criaErro(campo, 'CPF Inválido.');
             return false;
         }
+
+        if(cpf !== 'number') valid = false;
+
         return true;
     }   
 
