@@ -19,11 +19,20 @@ const getUserVideos = (email,callback)=>{
     },2000);
 };
 
+const getVideoDetails = (video, callback)=>{
+    setTimeout(()=>{
+        callback({title: "video title"});
+    },2500);
+};
+
 const user = loginUser(
-    'reisfellipe11@gmail.com', '#2q2yuul28',
+    'reisdev.2k24@gmail.com', 'pass2k24GO',
      (user)=>{
     getUserVideos(user.email, (videos)=>{
         console.log({videos});
+        getVideoDetails(videos[0], (videoDetails)=>{
+            console.log({videoDetails});
+        });
     })
 }, (error)=>{
     console.log({error});
