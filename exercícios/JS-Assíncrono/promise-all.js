@@ -42,10 +42,20 @@ const getVideoDetails = (video)=>{
     });
 };
 
-loginUser('reisfellipe11@gmail.com', '2312837')
-.then((user)=> getUserVideos(user.email))
-.then((videos)=> getVideoDetails(videos[0]))
-.then((videoDetails)=> console.log({videoDetails}))
-.catch((error)=> console.log({error}));
-
 // Promise.all
+const yt = new Promise((resolve)=>{
+    setTimeout(()=>{
+        resolve('videos from youtube');
+    },2000);
+})
+
+const fb = new Promise((resolve)=>{
+    setTimeout(()=>{
+        resolve('post from facebook');
+    },3000);
+})
+
+//nesse caso a Promise.all só é executada quando todas as promises terminarem de ser executadas baseadas no tempo que cada um levará
+Promise.all([yt,fb]).then((result)=>{
+    console.log({result});
+});
