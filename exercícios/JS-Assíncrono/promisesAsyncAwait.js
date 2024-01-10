@@ -1,6 +1,6 @@
 const loginUser = (email,password) => {
     return new Promise((resolve,reject)=>{
-        const error = false;
+        const error = true;
 
         if(error){
             reject(new Error("error in login!"));
@@ -36,11 +36,15 @@ const getVideoDetails = (video)=>{
 // .catch((error)=> console.log({error}));
 
 const displayUser = async () => {
+    try{
     const user = await loginUser('reisfellipe11@gmail.com', '1234567');
     const videos = await getUserVideos(user.email);
     const videoDetails = await getVideoDetails(videos[0]);
 
     console.log({user,videos,videoDetails});
-}
+    }catch(error){
+        console.log({error});
+    }
+};
 
 displayUser();
