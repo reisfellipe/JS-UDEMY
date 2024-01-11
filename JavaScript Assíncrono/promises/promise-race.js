@@ -16,17 +16,18 @@ function esperaAi(msg,tempo){
     });
 }
 
-// Promise.all Promise.race Promise.resolve Promise.reject
 const promises = [
-    'Primeiro valor',
+    // 'Primeiro valor',
     esperaAi('Promise 1', 3000),
-    esperaAi('Promise 2', 500),
+    esperaAi('Promise 2', 500), //Essa leva menos tempo, portanto é retornada
     esperaAi('Promise 3', 1000),
-    esperaAi(1000, 1000),
-    'Another value'
+    // esperaAi(1000, 1000),
+    // 'Another value'
 ];
 
-Promise.all(promises)
+//Promise.race = sempre vai entregar o primeiro valor
+
+Promise.race(promises)
 .then((valor)=>{
     console.log({valor});
 })
