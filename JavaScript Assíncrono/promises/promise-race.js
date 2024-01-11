@@ -6,11 +6,11 @@ function random(min,max){
 
 function esperaAi(msg,tempo){
     return new Promise((resolve, reject)=>{
-        if(typeof msg !== 'string') {
-           reject('CODE FAILED');
-           return;
-        }
         setTimeout(()=>{
+            if(typeof msg !== 'string') {
+               reject('CODE FAILED');
+               return;
+            }
             resolve(msg.toUpperCase() + ' - Passei na promise');
         },tempo);
     });
@@ -21,7 +21,7 @@ const promises = [
     esperaAi('Promise 1', 3000),
     esperaAi('Promise 2', 500), //Essa leva menos tempo, portanto é retornada
     esperaAi('Promise 3', 1000),
-    // esperaAi(1000, 1000),
+    esperaAi(1000, 300),
     // 'Another value'
 ];
 
