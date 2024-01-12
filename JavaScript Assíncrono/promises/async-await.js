@@ -48,21 +48,21 @@ async function executa(){
 const teste2 = esperaAi('qlq', 5000);
 console.log(teste2);
 
-// esperaAi('Fase 1', random())
-//     .then(valor => {
-//         console.log(valor)
-//         return esperaAi('Fase 2', random());
-//     })
-//     .then(fase => {
-//         console.log(fase);
-//         return esperaAi('Fase 3', random());
-//     })
-//     .then(fase => {
-//         console.log(fase);
-//         return fase;
-//     })
-//     .then(fase => {
-//         console.log('Terminamos na fase:', fase);
-//     })
-//     .catch(error => console.log(error));
+esperaAi('Fase 1', random())
+    .then(valor => {
+        console.log(valor)
+        return esperaAi('Fase 2', random());
+    })
+    .then(fase => {
+        console.log(fase);
+        return esperaAi('Fase 3', random());
+    })
+    .then(fase => {
+        console.log(fase);
+        return fase;
+    })
+    .then(fase => {
+        console.log('Terminamos na fase:', fase);
+    })
+    .catch(error => console.log(error));
 
