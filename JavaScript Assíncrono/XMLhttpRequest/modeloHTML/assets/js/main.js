@@ -9,7 +9,7 @@ const request = obj => {
             if(xhr.status >= 200 && xhr.status < 300){
                 resolve(xhr.responseText);
             }else {
-                reject(xhr.statusText);
+                reject (xhr.statusText);
             }
         });
     });
@@ -25,10 +25,10 @@ document.addEventListener('click', e => {
     }
 });
 
-function carregaPagina(el){
+async function carregaPagina(el){
     const href = el.getAttribute('href');
-    
-    request({
+    console.log(href);
+    const objConfig = {
         method: 'GET',
         url: href,
         success(response){
@@ -37,7 +37,14 @@ function carregaPagina(el){
         error(errorText){
             console.log(errorText);
         }
-    });
+    };
+
+    try{
+        const response = await request(objConfig);
+        carregaResultado(response);
+    }catch(e){
+        console.log(e);
+    }
 }
 
 function carregaResultado(response){
