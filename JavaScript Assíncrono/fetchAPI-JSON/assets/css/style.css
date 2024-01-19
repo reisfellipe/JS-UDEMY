@@ -75,3 +75,9 @@ form button:hover {
     cursor: pointer;
     background-image: linear-gradient(to top, #1f552f, #018d30);
 }
+
+table{
+    width: 100%;
+    color: wheat;
+    font-weight: bold;
+}

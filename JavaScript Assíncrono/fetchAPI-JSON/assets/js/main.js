@@ -1,3 +1,30 @@
+// fetch('pessoas.json')
+//     .then(resposta=>resposta.json())
+//     .then(json=>console.log(json));
+
 fetch('pessoas.json')
-    .then(resposta=>resposta.json())
-    .then(json=>console.log(json));
+    .then(resposta => resposta.json())
+    .then(json => carregaElementosNaPagina(json));
+
+function carregaElementosNaPagina(url){
+    const table = document.createElement('table');
+    for(let pessoa of url){
+        const tr = document.createElement('tr');
+        
+        let td = document.createElement('td');
+        td.innerHTML = pessoa.nome;
+        tr.appendChild(td);
+
+        td = document.createElement('td');
+        td.innerHTML = pessoa.idade;
+        tr.appendChild(td);
+
+        td = document.createElement('td');
+        td.innerHTML = pessoa.salario;
+        tr.appendChild(td);
+
+        table.appendChild(tr);
+    }
+    const resultado = document.querySelector('.resultado');
+    resultado.appendChild(table);
+}
