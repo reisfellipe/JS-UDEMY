@@ -1,4 +1,4 @@
 const nome = 'Fellipe';
 const obj = {nome};
-const novoObj = {...obj};
+const novoObj = {...nome};
 console.log(novoObj);
