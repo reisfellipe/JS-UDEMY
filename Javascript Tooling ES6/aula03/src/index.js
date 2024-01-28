@@ -15,5 +15,9 @@
 // console.log(MeuModulo); //Vai retornar um OBJETO contendo todos os dados juntos de uma só vez...
 
 //Nesse caso estamos exportando um dado DEFAULT que é o padrão, então nomeamos como bem quisermos, e virá somente ele, esse recurso só pode ser usado uma vez por arquivo...
-import qualquerNome from './modulo1';
-console.log(qualquerNome(5,4));
+import Pessoa, {nome,sobrenome,idade,soma} from './modulo1';
+
+const p1 = new Pessoa(nome,sobrenome);
+console.log(p1);
+console.log(nome,sobrenome,idade);
+console.log(soma(50,100));
