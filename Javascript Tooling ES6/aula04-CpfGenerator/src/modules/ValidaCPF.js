@@ -1,4 +1,4 @@
-class ValidaCPF {
+export default class ValidaCPF {
     constructor(cpfEnviado){
         Object.defineProperty(this, 'cpfLimpo', {
             writable: false,
@@ -24,7 +24,7 @@ class ValidaCPF {
         let reverso = cpfSemDigitos.length + 1;
 
         for(let stringNumerica of cpfSemDigitos){
-            total =+ reverso * Number(stringNumerica);
+            total += reverso * Number(stringNumerica);
             reverso--;
         }
         const digito = 11 - (total % 11);
@@ -40,3 +40,5 @@ class ValidaCPF {
         return this.novoCPF === cpfLimpo;
     }
 }
+
+console.log('Cheguei aqui!');
