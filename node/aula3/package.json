@@ -9,9 +9,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "express": "^2.1.0"
-  },
   "dependencies": {
     "save-prod": "^1.0.0"
   }
