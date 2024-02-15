@@ -16,13 +16,17 @@ app.get('/', (req, res) => {
     `);
 });
 
+//                          ? está informando ao navegador que esse parâmetro pode ou nao ser recebido na URL
+app.get('/testes/:idUsuarios?/:parametro?', (req, res)=>{
+    console.log(req.params);
+    // res.send(req.params);
+    res.send(req.query);
+});
+
 app.post('/', (req,res)=>{
     res.send('Recebi o formulário');
 })
 
-app.get('/contato', (req, res)=>{
-    res.send('Obrigado por entrar em contato com a gente');
-});
 
 app.listen(3000, ()=>{
     console.log("Acessar http://localhost:3000");
