@@ -14,13 +14,13 @@ app.get('/', (req, res) => {
     res.send(`
     <form action="/" method="POST">
     Nome: <input type="text" name="nome">
-    <button>Enviar</button>
+    <button>Enviar formulário aqui</button>
     </form>
     `);
 });
 
 app.post('/', (req,res)=>{
-    res.send('Recebi o formulário');
+    res.send('Recebi o formulário fica de boa');
 })
 
 app.get('/contato', (req, res)=>{
