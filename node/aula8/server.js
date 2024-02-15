@@ -1,14 +1,11 @@
-//          Criar  Ler   Atualizar  Apagar
-//  CRUD -> CREATE READ  UPDATE     DELETE
-//          POST   GET   PUT        DELETE
-
-//http://meusite.com/ <- GET -> Entregue a página 
-//http://meusite.com/sobre <- GET -> Entregue a página /sobre
-//http://meusite.com/contato <- GET -> Entregue a página /contato
-
-
 const express  = require('express');
 const app = express();
+
+// http://faceboook.com/profiles/12345?campanha=googleads&nome_campanha=mentoria
+// campanha=googleads &
+// nome_campanha=mentoria
+//
+
 
 app.get('/', (req, res) => {
     res.send(`
