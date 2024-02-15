@@ -1,3 +1,12 @@
+//          Criar  Ler   Atualizar  Apagar
+//  CRUD -> CREATE READ  UPDATE     DELETE
+//          POST   GET   PUT        DELETE
+
+//http://meusite.com/ <- GET -> Entregue a página 
+//http://meusite.com/sobre <- GET -> Entregue a página /sobre
+//http://meusite.com/contato <- GET -> Entregue a página /contato
+
+
 const express  = require('express');
 const app = express();
 
@@ -5,13 +14,13 @@ app.get('/', (req, res) => {
     res.send(`
     <form action="/" method="POST">
     Nome: <input type="text" name="nome">
-    <button>Enviar formulário aqui</button>
+    <button>Enviar</button>
     </form>
     `);
 });
 
 app.post('/', (req,res)=>{
-    res.send('Recebi o formulário fica de boa');
+    res.send('Recebi o formulário');
 })
 
 app.get('/contato', (req, res)=>{
