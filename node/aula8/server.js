@@ -6,6 +6,14 @@ const app = express();
 // nome_campanha=mentoria
 //
 
+// app.use(express.urlencoded({extended:true}));
+app.use(
+    express.urlencoded(
+        {
+            extended:true
+        }
+    )
+);
 
 app.get('/', (req, res) => {
     res.send(`
@@ -19,12 +27,13 @@ app.get('/', (req, res) => {
 //                          ? está informando ao navegador que esse parâmetro pode ou nao ser recebido na URL
 app.get('/testes/:idUsuarios?/:parametro?', (req, res)=>{
     console.log(req.params);
-    // res.send(req.params);
-    res.send(req.query);
+    console.log(req.query);
+    res.send(req.query.facebookprofile);
 });
 
 app.post('/', (req,res)=>{
-    res.send('Recebi o formulário');
+    console.log(req.body);
+    res.send(`Recebi os dados: ${req.body.nome}`);
 })
 
 
