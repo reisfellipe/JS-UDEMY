@@ -1,10 +1,9 @@
-exports.paginaInicial = (req, res, next) => {
-    console.log('Respondendo ao cliente');
+exports.paginaInicial = (req, re) => {
     res.render('index');
-    console.log(`Olha o que tem na req.session.nome ${req.session.nome}`);
-    next();
+    return;
 };
 
 exports.trataPost=(req,res)=>{
     res.send('Ei, sou uma nova rota de POST.');
+    return;
 };
