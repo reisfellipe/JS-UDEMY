@@ -12,10 +12,10 @@ const contatoController = require('./src/controllers/contatoController');
 // }
 
 //rotas da home
-route.get('/', meuMiddleware, homeController.paginaInicial, function(req,res,next){
+route.get('/', homeController.paginaInicial, function(req,res,next){
     console.log();
     console.log('Ainda estou aqui');
-    console.log(`'Último middleware' -> Olha o que tem na req.session.nome ${req.session.nome}`);
+    console.log(`'Último middleware' -> Olha o que tem na req.session.nome ${req.session.cliente}`);
 });
 route.post('/', homeController.trataPost);
 // Rotas de contato
