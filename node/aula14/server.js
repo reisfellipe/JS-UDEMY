@@ -1,5 +1,8 @@
 const express  = require('express');
 const app = express();
+const mongoose = require('mongoose');
+mongoose.connect()
+
 const routes = require('./routes');
 const path = require('path');
 const meuMiddleware = require('./src/middlewares/middleware');
