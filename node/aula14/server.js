@@ -1,7 +1,9 @@
 const express  = require('express');
 const app = express();
 const mongoose = require('mongoose');
-mongoose.connect()
+const connectionString = 'mongodb+srv://reisfellipedev:asenhaesenha@udemyjs.dnv31sm.mongodb.net/BASEDEDADOS?retryWrites=true&w=majority&appName=udemyJs';
+mongoose.connect(connectionString);
+
 
 const routes = require('./routes');
 const path = require('path');
