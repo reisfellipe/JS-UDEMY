@@ -3,7 +3,7 @@ exports.paginaInicial = (req, res) => {
     return;
 };
 
-exports.trataPost=(req,res)=>{
+exports.trataPost=(req,res,next)=>{
     res.send(req.body);
     return;
 };

@@ -13,7 +13,7 @@ module.exports = (req,res,next) => {
 
 // OUU...
 
-exports.outroMiddleware = (req,res,next) => {
-    console.log('Sou seu outro middleware');
-    next();
-};
+// exports.outroMiddleware = (req,res,next) => {
+//     console.log('Sou seu outro middleware');
+//     next();
+// };
