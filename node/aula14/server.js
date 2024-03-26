@@ -1,9 +1,11 @@
+require('dotenv').config();
+
 const express = require('express');
 const app = express();
 
 const mongoose = require('mongoose');
-const connectionString = 'mongodb+srv://justfellipe:asenhaesenha@cluster0.bk5ee3g.mongodb.net/BASEDEDADOS?retryWrites=true&w=majority&appName=Cluster0';
-mongoose.connect(connectionString, {useNewUrlParser:true, useUnifiedTopology:true})
+// const connectionString = 'mongodb+srv://justfellipe:asenhaesenha@cluster0.bk5ee3g.mongodb.net/BASEDEDADOS?retryWrites=true&w=majority&appName=Cluster0';
+mongoose.connect(process.env.CONNECTIONSTRING, {useNewUrlParser:true, useUnifiedTopology:true})
     .then(()=>{
         app.emit('Conectado!');
     })
