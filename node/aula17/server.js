@@ -33,7 +33,6 @@ const sessionOptions = session({
     }
 });
 app.use(sessionOptions);
-
 app.use(flash());
 
 app.set('views', path.resolve(__dirname, 'src', 'views'));
@@ -46,12 +45,9 @@ app.use(checkCsrfError);
 app.use(csrfMiddleware);
 app.use(routes);
 
-mongoose.connect(process.env.CONNECTIONSTRING)
-    .then(() => {
-        console.log('Conectado ao MongoDB');
-        app.listen(3000, () => {
-            console.log("Acessar http://localhost:3000");
-            console.log('Servidor executando na porta 3000');
-        });
-    })
-    .catch(e => console.log(e));
+app.on('pronto', () => {
+    app.listen(3000, () => {
+        console.log('Acessar http://localhost:3000');
+        console.log('Servidor executando na porta 3000');
+    });
+});

@@ -1,4 +1,4 @@
-const path = require('path'); //CommonJS
+const path = require('path'); // CommonJS
 
 module.exports = {
     mode: 'production',
@@ -9,7 +9,7 @@ module.exports = {
     },
     module: {
         rules: [{
-            exclude:/node_modules/,
+            exclude: /node_modules/,
             test: /\.js$/,
             use: {
                 loader: 'babel-loader',
@@ -22,5 +22,5 @@ module.exports = {
             use: ['style-loader', 'css-loader']
         }]
     },
-    devtool: 'source-map',
+    devtool: 'source-map'
 };
