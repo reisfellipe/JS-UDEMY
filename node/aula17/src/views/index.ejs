@@ -5,6 +5,7 @@
     <section class="container">
         <h1>Aqui é um card que irá revelar uma ação programada</h1>
         <form action="/" method="post">
+            <input type="hidden" name="_crsf" value="<%= crsfToken %>">
             <label>Cliente</label>
             <input type="text" name="cliente">
             <button>Submit</button>
