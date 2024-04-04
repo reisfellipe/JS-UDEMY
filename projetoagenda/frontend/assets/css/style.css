@@ -1,7 +1,7 @@
-  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
 
 :root {
-    --bg-color-gradient: linear-gradient(to 45deg, #38184C,#45214A,#323050);
+    --bg-color-gradient: linear-gradient(to 45deg, #38184C, #45214A, #323050);
     --font-default: 'Open sans', sans-serif;
 }
 
@@ -11,7 +11,7 @@
 }
 
 body {
-    background-image: linear-gradient(to top, #38184C,#45214A,#323050);
+    background-image: linear-gradient(to top, #38184C, #45214A, #323050);
     font-family: var(--font-default);
     margin: 0;
     padding: 0;
@@ -37,7 +37,9 @@ p {
     background: linear-gradient(to bottom, #180326, #380759, #590D8C);
 }
 
-form input, form label,form button {
+form input,
+form label,
+form button {
     display: block;
     margin-bottom: 10px;
     width: 100%;
